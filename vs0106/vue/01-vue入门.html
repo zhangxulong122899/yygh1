@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!-- 引入vue.js文件的标签必须是双标签，不能是自结束标签 -->
+    <!-- 一旦一个script标签引入js文件之后，就不能在起始标签和结束标签之间写js代码，如果想写就再开一个新的script标签 -->
+    <script src="vue.min.js"></script>
+</head>
+<body>
+
+    <div id="app">
+        {{message}}
+        <table>
+            <input type="text" :value="message"></input>
+        </table>
+    </div>
+    
+
+
+    <!-- 
+        VUE是一个MVVM架构的框架
+        M:Model
+        V:VIEW
+        VM:VIEWModel
+     -->
+    <script>
+        new Vue({
+            el:"#app",//指定vue的区域
+            data:{
+                message:"hello vue"
+            },
+            methods:{
+
+            }    
+        })
+    </script>
+</body>
+</html>

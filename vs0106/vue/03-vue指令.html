@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    <!-- 
+        vue指令:
+            v-bind:单项数据绑定指令，简写为 :
+            v-model:双向数据绑定指令
+            v-on:事件名称 绑定事件，可简写为:@事件名称
+            
+
+            v-if=""
+            v-show=""
+            v-text:
+            v-for:
+     -->
+    <div id="app">
+        {{username}}
+        <input type="text" name="username" v-bind:value="username"></input>
+
+        <input type="button" value="点我宝贝儿" v-on:click="func()"></input>
+
+        
+        <div v-for="value in obj1">
+            {{value}}
+        </div>
+
+
+
+        <div v-for="obj in items">
+            {{obj.username}} ---> {{obj.age}} ----> {{obj.gender?'男':'女'}}
+        </div>
+
+
+        <!-- <div v-text = "username"></div>
+        <div>----{{username}}----</div>
+
+
+
+        <div v-if="score > 90">
+            优秀
+        </div>
+        <div v-else-if="score > 80">
+            良好
+        </div>
+        <div v-else-if= "score > 60">
+            及格
+        </div>
+        <div v-else>
+            继续加油
+        </div> -->
+    </div>
+    <script src="vue.min.js"></script>
+    <script>
+        new Vue({
+            el: '#app',
+            data: {
+                username:"hello 张三",
+                score:70,
+                items:[
+                    {
+                        username:"张三",
+                        age:18,
+                        gender:true
+                    },
+                    {
+                        username:"李四",
+                        age:20,
+                        gender:true
+                    },
+                    {
+                        username:"王麻子",
+                        age:22,
+                        gender:false
+                    },
+                    {
+                        username:"赵六",
+                        age:24,
+                        gender:true
+                    }
+                ],
+                obj1: {
+                        username:"王麻子",
+                        age:22,
+                        gender:false
+                    }
+            },
+            methods:{
+                func(){
+                    alert("耶耶耶！！")
+                
+                }
+            }
+        })
+    </script>
+</body>
+
+</html>

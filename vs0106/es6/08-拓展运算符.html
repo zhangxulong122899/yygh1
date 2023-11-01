@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        //拷贝，浅拷贝和深拷贝
+
+        //浅拷贝
+        var user1 = {name:"张三",age : 10}
+        var user2 = user1;
+        console.log(user1);
+        console.log(user2);
+        console.log(user1 == user2);
+        user1.name="王麻子"
+        console.log(user1);
+        console.log(user2);
+        
+
+        //深拷贝
+        var user3 = {name:"张三",age:18};
+        var user4 = {...user3};
+        console.log(user3)
+        console.log(user4)
+        console.log(user3 == user4)
+
+        user3.name="李四";
+        console.log(user3);
+        console.log(user4);
+
+        //拓展运算符（...）合并对象使用
+        var goods = {price:1000,desc:"很好的产品"}
+        var user5 = {...user3,...goods};
+        console.log(user5)
+    </script>
+</body>
+</html>

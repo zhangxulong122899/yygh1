@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    <div id="app">
+        <aaa></aaa>
+        <bbb></bbb>
+    </div>
+    <script src="vue.min.js"></script>
+    <script>
+        new Vue({
+            el: '#app',
+            data: {
+                
+            },
+            //局部组件，只能是在当前页面使用
+            components:{
+                "aaa":{
+                    template:"<ul><li>张三丰</li><li>张无忌</li><li>张三</li></ul>"
+                },
+                "bbb":{
+                    template:"<ul><li>赵敏</li><li>周芷若</li><li>小昭</li></ul>"
+                }
+            }
+        })
+    </script>
+</body>
+
+</html>

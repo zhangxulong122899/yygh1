@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        var add = function(a,b){
+           return a+b;         
+        }
+        console.log(add(1,2));
+
+
+          //使用箭头函数简化函数的写法
+            /*
+                参数部分：当值只有一个参数的时候，（）可以省略
+                function关键字： =>
+                函数体：当函数体中只有一行代码的时候，{}是可以省略的。当{}省略的时候，如果方法有返回值 return关键字也必须省略
+            */
+          var add =(a,b)=> a+b;         
+        
+        console.log(add(1,2));
+    </script>
+</body>
+</html>

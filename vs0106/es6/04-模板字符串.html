@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        var str1 = "早上好，吃饭了";
+        var username = "张三";
+        var str3 = "我的名字是" + username;
+        //模板字符串支持换行，支持引用变量
+        var str2 = `a
+        ${username}
+        b`;
+        console.log(str2);
+        //支持函数调用
+        function hello(){
+            return "hello vscode";
+        }
+        var str4 = `Good Morning${hello()}`;
+        console.log(str4);
+    </script>
+</body>
+</html>

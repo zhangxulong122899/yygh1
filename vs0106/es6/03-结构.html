@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width={device-width}, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        //1.针对数组接口
+            //传统方式
+            let a = 1,b=2,c=3;
+            //es6方式
+            let [x,y,z] = [10,11,12];
+            console.log(x+":"+y+":"+z);
+
+        //2.针对对象
+        //传统方式
+        var user = {name:"张三",age :10};
+        var username = user.name;
+        var age1 = user.age;
+        console.log(username + ":" + user.age);  
+        //es6
+        let{name,age} = user;
+        console.log(name + "::" + age);
+
+    </script>
+</body>
+</html>
